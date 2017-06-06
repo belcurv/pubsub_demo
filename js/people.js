@@ -1,7 +1,7 @@
 /* jshint esversion:6, browser: true, devel: true */
-/* globals jQuery, events */
+/* globals jQuery, app */
 
-var people = (function($) {
+app.people = (function($) {
     
     var people = ['Will', 'Steve'],
         DOM    = {};
@@ -43,7 +43,7 @@ var people = (function($) {
         
         // instead of above tight coupling, let's use pubsub pattern.
         // We emit the 'peopleChanged' event and pass our people collection
-        events.emit('peopleChanged', people);
+        app.events.emit('peopleChanged', people);
     }
     
     
@@ -70,18 +70,19 @@ var people = (function($) {
     }
     
     
-    (function init() {
+    function init() {
         cacheDom();
         bindEvents();
         _render();
-    }());
+    }
     
     
     /* ============================ EXPORT API ============================= */
 
     return {
-        addPerson: addPerson,
-        deletePerson: deletePerson
+        addPerson    : addPerson,
+        deletePerson : deletePerson,
+        init         :init
     };
 
 })(jQuery);

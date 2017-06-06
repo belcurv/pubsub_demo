@@ -1,4 +1,5 @@
 /* jshint esversion:6 */
+/* globals app */
 
 /* Use:
 
@@ -32,7 +33,7 @@
    
 */
 
-var events = (function() {
+app.events = (function() {
     
     var events = {};
     

@@ -1,7 +1,7 @@
 /* jshint esversion:6, devel:true, browser: true */
-/* globals jQuery, events */
+/* globals jQuery, app, events */
 
-var stats = (function($) {
+app.stats = (function($) {
     
     var people = 0,
         DOM = {};
@@ -20,7 +20,7 @@ var stats = (function($) {
     function _bindEvents() {
         // subscribe to 'peopleChanged' event
         // When received, fire setPeople
-        events.on('peopleChanged', setPeople);
+        app.events.on('peopleChanged', setPeople);
     }
     
     
@@ -48,18 +48,18 @@ var stats = (function($) {
     }
     
     
-    (function init() {
+    function init() {
         _cacheDom();
         _bindEvents();
-    }());
+    }
 
     
     /* ============================ EXPORT API ============================= */
 
      return {
-         // no need for public setPeople when using PubSub
-         // setPeople : setPeople
-         destroy : destroy
+         // setPeople : setPeople  // not needed when using PubSub
+         destroy : destroy,
+         init    : init
      };
 
 })(jQuery);

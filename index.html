@@ -9,25 +9,32 @@
 </head>
 <body>
   
-   <div id="stats-module">
-       <h1>Stats</h1>
-       
-       
-   </div>
-   
-   <div id="peopleModule">
-       <h1>People</h1>
-       <input type="text" placeholder="name">
-       <button id="addPerson">Add Person</button>
-       
-       <ul id="people"></ul>
-       
-   </div>
-   
-   <script src="lib/jquery-3.2.1.min.js"></script>
-   <script src="js/pubsub.js"></script>
-   <script src="js/stats.js"></script>
-   <script src="js/people.js"></script>
+    <div id="stats-module">
+        <h1>Stats</h1>
+    </div>
+    
+    <div id="peopleModule">
+        <h1>People</h1>
+        <input type="text" placeholder="name">
+        <button id="addPerson">Add Person</button>
+        
+        <ul id="people"></ul>
+        
+    </div>
+    
+    <!-- 3rd party javascript -->
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    
+    <!-- our javascript -->
+    <script src="js/app.js"></script>
+    <script src="js/pubsub.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/people.js"></script>
+
+    <!-- init application once DOM is ready -->
+    <script>
+        $(function() { app.init(); });
+    </script>
     
 </body>
 </html>
