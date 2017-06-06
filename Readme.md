@@ -1,7 +1,9 @@
 ### Readme
 
 Based on videos 4 and 5 from the Modular Javascript series:
+
 [#4 - PubSub JavaScript Design](https://www.youtube.com/watch?v=nQRXi1SVOow&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f&index=4)
+
 [#5 - PubSub Implementation](https://www.youtube.com/watch?v=jDhDvnlbr4Q&index=5&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f)
 
 #### Summary
